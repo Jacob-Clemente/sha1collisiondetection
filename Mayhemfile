@@ -1,5 +1,5 @@
-project: jacob-clemente/clinfo
-target: clinfo
+project: jacob-clemente/sha1collisiondetection
+target: sha1collisiondetection
 
 cmds:
-  - cmd: /clinfo
+  - cmd: /sha1collisiondetection
