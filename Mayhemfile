@@ -1,0 +1,5 @@
+project: jacob-clemente/clinfo
+target: clinfo
+
+cmds:
+  - cmd: /clinfo

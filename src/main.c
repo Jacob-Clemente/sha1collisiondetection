@@ -35,7 +35,7 @@ char* basename(char* path)
 }
 #endif
 
-int main(int argc, char** argv)
+int target(int argc, char** argv)
 {
 	FILE* fd;
 	unsigned char hash2[20];
@@ -113,3 +113,11 @@ int main(int argc, char** argv)
 #ifdef _MSC_VER
 #pragma warning(disable : 4710 )    /* 4710 -- compiler complains about printf,sprintf not being inlined. */
 #endif
+
+int LLVMFuzzerTestOneInput(char* data, size_t size) {
+	char* args[2];
+	args[0] = "sha1collisiondetection";
+	args[1] = data;
+	target(2, args);
+	return 0;
+}
